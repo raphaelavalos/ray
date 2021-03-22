@@ -729,6 +729,8 @@ class Trainer(Trainable):
     def cleanup(self):
         if hasattr(self, "workers"):
             self.workers.stop()
+        if hasattr(self, "evaluation_workers"):
+            self.evaluation_workers.stop()
         if hasattr(self, "optimizer") and self.optimizer:
             self.optimizer.stop()
 

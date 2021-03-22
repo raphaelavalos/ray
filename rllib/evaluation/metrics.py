@@ -171,7 +171,7 @@ def summarize_episodes(
         else:
             custom_metrics[k + "_min"] = float("nan")
             custom_metrics[k + "_max"] = float("nan")
-        del custom_metrics[k]
+        # del custom_metrics[k]
 
     for k, v_list in perf_stats.copy().items():
         perf_stats[k] = np.mean(v_list)
